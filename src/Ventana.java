@@ -37,8 +37,8 @@ public class Ventana extends JFrame {
          
     }
     public void campos(){
-        c = new JTextField("Puto el kevin"); 
-        c.setBounds(0,0,300,80); 
+        c = new JTextField(""); 
+        c.setBounds(0,20,300,80); 
         c.setBorder(null); 
         c.setBackground(Color.black);
         c.setBorder(BorderFactory.createLineBorder(Color.orange, 3));
@@ -54,7 +54,7 @@ public class Ventana extends JFrame {
         b.setBorder(null);
         b.setForeground(Color.ORANGE);
         b.setBorder(BorderFactory.createLineBorder(Color.orange, 3));
-        b.setBounds(20, 300, 50, 50);
+        b.setBounds(20, 350, 50, 50);
         b.setFont(new Font("arial",Font.BOLD,35));
         b.addActionListener(new ActionListener() {
 
@@ -67,6 +67,47 @@ public class Ventana extends JFrame {
             
         });
         panel.add(b); 
+
+        b1 = new JButton("2"); 
+        b1.setBackground(Color.black);
+        b1.setBorder(null);
+        b1.setForeground(Color.ORANGE);
+        b1.setBorder(BorderFactory.createLineBorder(Color.orange, 3));
+        b1.setBounds(90, 350, 50, 50);
+        b1.setFont(new Font("arial",Font.BOLD,35));
+        b1.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String num = b1.getText(); 
+                c.setText(num);
+
+            }
+            
+        });
+        panel.add(b1); 
+
+        b2 = new JButton("3"); 
+        b2.setBackground(Color.black);
+        b2.setBorder(null);
+        b2.setForeground(Color.ORANGE);
+        b2.setBorder(BorderFactory.createLineBorder(Color.orange, 3));
+        b2.setBounds(160, 350, 50, 50);
+        b2.setFont(new Font("arial",Font.BOLD,35));
+        b2.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String num = b2.getText(); 
+                c.setText(num);
+
+            }
+            
+        });
+        panel.add(b2); 
+
+        
+         
 
        
 
