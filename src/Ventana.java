@@ -3,6 +3,8 @@ import javax.swing.border.Border;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*; ; 
 
@@ -39,6 +41,7 @@ public class Ventana extends JFrame {
         c.setBounds(0,0,300,80); 
         c.setBorder(null); 
         c.setBackground(Color.black);
+        c.setBorder(BorderFactory.createLineBorder(Color.orange, 3));
         c.setFont(new Font("arial",Font.BOLD,22));
         c.setForeground(Color.orange);
         panel.add(c); 
@@ -50,8 +53,19 @@ public class Ventana extends JFrame {
         b.setBackground(Color.black);
         b.setBorder(null);
         b.setForeground(Color.ORANGE);
-        b.setBounds(0, 100, 70, 70);
+        b.setBorder(BorderFactory.createLineBorder(Color.orange, 3));
+        b.setBounds(20, 300, 50, 50);
         b.setFont(new Font("arial",Font.BOLD,35));
+        b.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String num = b.getText(); 
+                c.setText(num);
+
+            }
+            
+        });
         panel.add(b); 
 
        
