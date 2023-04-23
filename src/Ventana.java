@@ -1,4 +1,6 @@
 import javax.swing.JFrame;
+import javax.swing.border.Border;
+
 import java.awt.Color;
 import java.awt.Font;
 
@@ -26,7 +28,7 @@ public class Ventana extends JFrame {
     public void paneles(){
         panel = new JPanel();
         panel.setLayout(null);
-       //panel.setBackground(Color.BLACK);
+        panel.setBackground(Color.BLACK);
         this.getContentPane().add(panel); 
         campos();
         botones(); 
@@ -35,6 +37,7 @@ public class Ventana extends JFrame {
     public void campos(){
         c = new JTextField("Puto el kevin"); 
         c.setBounds(0,0,300,80); 
+        c.setBorder(null); 
         c.setBackground(Color.black);
         c.setFont(new Font("arial",Font.BOLD,22));
         c.setForeground(Color.orange);
@@ -44,16 +47,14 @@ public class Ventana extends JFrame {
     public void botones(){
 
         b = new JButton("1"); 
-        b.setBackground(Color.ORANGE);
+        b.setBackground(Color.black);
+        b.setBorder(null);
         b.setForeground(Color.ORANGE);
         b.setBounds(0, 100, 70, 70);
         b.setFont(new Font("arial",Font.BOLD,35));
         panel.add(b); 
 
-        b1 = new JButton(); 
-        b1.setBounds(200, 200, 40, 40);
-        b1.setBackground(Color.CYAN);
-        panel.add(b1);
+       
 
     }
     
